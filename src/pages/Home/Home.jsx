@@ -6,6 +6,7 @@ import bannert1 from '../../assets/bg-title-1.webp'
 import bsp from '../../assets/b-special.png'
 import { FaPlay } from "react-icons/fa";
 import { FaInfo } from "react-icons/fa";
+import Carousel from './Carousel'
 
 function Home() {
   return (
@@ -23,10 +24,11 @@ function Home() {
             <button className='btn'><FaPlay className='btn-icon'/>Play</button>
             <button className='btn2'><FaInfo className='btn-icon'/>More info</button>
           </div>
+          <Carousel/>
         </div>
       </div>
     </div>
   )
 }
 
-export default Home
+export default Home;

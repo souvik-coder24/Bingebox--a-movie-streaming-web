@@ -1,0 +1,31 @@
+{
+    "carouselItems": [
+      {
+        "id": 1,
+        "image": "bg-1.webp",
+        "video": "1mMma3LNFVE",
+        "title": "Title 1",
+        "details": {
+          "year": "2024",
+          "languages": "7 Languages",
+          "rating": "U/A +16",
+          "description": "Twin brothers, one a cop, the other a criminal, become entangled in a web of deceit, loyalty, and betrayal, testing their bond and challenging their morals.",
+          "genres": ["Thriller", "Drama", "Action", "Organized Crime"]
+        }
+      },
+      {
+        "id": 2,
+        "image": "bg-2.webp",
+        "video": "youtube-link-2",
+        "title": "Title 2",
+        "details": {
+          "year": "2023",
+          "languages": "5 Languages",
+          "rating": "U/A +18",
+          "description": "Another thrilling story...",
+          "genres": ["Action", "Adventure", "Sci-Fi"]
+        }
+      }
+    ]
+  }
+  
