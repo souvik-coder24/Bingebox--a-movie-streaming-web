@@ -1,33 +1,70 @@
-import React from 'react'
+import React, { useRef } from 'react';
 import './Home.css'
 import Navbar from '../../components/Navbar/Navbar'
-import Banner from '../../assets/bg-1.webp'
-import bannert1 from '../../assets/bg-title-1.webp'
-import bsp from '../../assets/b-special.png'
-import { FaPlay } from "react-icons/fa";
-import { FaInfo } from "react-icons/fa";
-import Carousel from './Carousel'
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { FaPlay, FaInfo} from "react-icons/fa"
+import Data from '../../data.json'
 
 function Home() {
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
   return (
     <div className='home'>
       <Navbar/>
-      <div className="hero">
-        <img src={Banner} alt="" className='banner-img'/>
-        <div className="hero-caption">
-          <img src={bannert1} alt="title" className='caption-img' />
-          <img src={bsp} alt="bingespecial" className='bsp'/>
-          <p className='details'>2024 | 7 Languages | U/A +16</p>
-          <p>Twin brothers, one a cop, the other a criminal, become entangled in a web of deceit, loyalty, and betrayal, testing their bond and challenging their morals.</p>
-          <p className='details'>Thriller | Drama | Action | Organized Crime</p>
-          <div className="hero-btns">
-            <button className='btn'><FaPlay className='btn-icon'/>Play</button>
-            <button className='btn2'><FaInfo className='btn-icon'/>More info</button>
+      <Slider {...settings}>
+        {Data.map(index =>(
+        <div className="hero">
+          <img src={index.background} alt="" className='banner-img'/>
+          <div className="hero-caption">
+            <img src={index.bsp} alt="bingespecial" className='bsp'/>
+            <img src={index.title} alt="title" className='caption-img' />
+            <p className='details'>{index.details}</p>
+            <p>{index.description}</p>
+            <p className='details'>{index.mcategory}</p>
+            <div className="hero-btns">
+              <button className='btn'><FaPlay className='btn-icon'/>Play</button>
+              <button className='btn2'><FaInfo className='btn-icon'/>More info</button>
+            </div>
           </div>
-          <Carousel/>
         </div>
-      </div>
-    </div>
+        ))}
+      </Slider>
+  </div>
   )
 }
 
