@@ -11,6 +11,16 @@
   },
   {
     "id": 2,
+    "title": "bg-title-4.webp",
+    "description": "Betrayed by loved ones, Shiva's world shattered! Taking a new identity as Abhimanyu, he endures many trials for a bloody vengeance, carved with love.",
+    "background": "bg-2.webp",
+    "bsp": "b-special.png",
+    "mcategory":"Thriller | Romance | Action | Conspiracy",
+    "details": "2024 | 2 Languages | U/A +16",
+    "video": "Lion.mp4"
+  },  
+  {
+    "id": 3,
     "title": "bg-title-2.webp",
     "description": "Betrayed by loved ones, Shiva's world shattered! Taking a new identity as Abhimanyu, he endures many trials for a bloody vengeance, carved with love.",
     "background": "bg-2.webp",
@@ -20,21 +30,13 @@
     "video": "Gunah.mp4"
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "bg-title-1.webp",
     "description": "Twin brothers, one a cop, the other a criminal, become entangled in a web of deceit, loyalty, and betrayal, testing their bond and challenging their morals.",
     "background": "bg-1.webp",
     "bsp": "b-special.png",
     "mcategory":"Thriller | Drama | Action | Organized Crime",
-    "details": "2024 | 7 Languages | U/A +16"
-  },
-  {
-    "id": 4,
-    "title": "bg-title-2.webp",
-    "description": "Betrayed by loved ones, Shiva's world shattered! Taking a new identity as Abhimanyu, he endures many trials for a bloody vengeance, carved with love.",
-    "background": "bg-2.webp",
-    "bsp": "b-special.png",
-    "mcategory":"Thriller | Romance | Action | Conspiracy",
-    "details": "2024 | 2 Languages | U/A +16"
-  }  
+    "details": "2024 | 7 Languages | U/A +16",
+    "video": "badcop.mp4"
+  }
 ]
