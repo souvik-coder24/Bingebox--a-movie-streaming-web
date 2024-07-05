@@ -3,7 +3,7 @@
     padding: 20px 6%;
     display: flex;
     justify-content: space-between;
-    position: fixed;
+    position: absolute;
     font-size: 14px;
     color: #fff;
     background-image: linear-gradient(180deg, rgba(0,0,0,0.7) 10%, transparent);
@@ -18,6 +18,9 @@
     width:60px;
     cursor: pointer;
 }
+.navbar-left img:hover{
+    transform: scale(1.1);
+}
 .navbar-left ul {
     display: flex;
     list-style: none;
@@ -26,21 +29,36 @@
 .navbar-left ul li{
     cursor: pointer;
     font-size: 15px;
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.navbar-left ul li:hover{
+    color: red;
+    transform: translateY(-4px);
 }
 .navbar-right{
     display: flex;
     gap: 20px;
     align-items: center;
 }
+.navbar-right p:hover{
+    color: red;
+}
 .navbar-right .icons{
     width: 20px;
     cursor: pointer;
     font-size: 15px;
 }
+.navbar-right .icons:hover{
+    color: red;
+}
 .navbar-right .profile{
     border-radius: 4px;
     width: 40px;
     font-size: 26px;
+}
+.navbar-right .profile:hover{
+    color: red;
 }
 .navbar-profile{
     cursor: pointer;
@@ -61,6 +79,12 @@
 .navbar .dropdown p{
     font-size: 13px;
     cursor: pointer;
+}.navbar-right p:hover,
+.navbar-right .icons:hover,
+.navbar-right .profile:hover,
+.navbar .dropdown p:hover{
+    color: red;
+    transform: scale(1.1);
 }
 .navbar-profile:hover .dropdown{
     display: block;

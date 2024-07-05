@@ -1,0 +1,42 @@
+.title-cards {
+    margin-top: 50px;
+    padding: 20px;
+    margin-bottom: -20px;
+  }
+  
+  .title-cards h2 {
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  .slick-slide {
+    padding: 0 2px; /* Add padding to each slide to create a gap */
+  }
+  
+  .slick-list {
+    margin: 0 -2px; /* Adjust margin to balance the padding */
+  }
+  
+  .card {
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+  }
+  
+  .card img {
+    width: 150px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+    cursor: pointer;
+  }
+  .card p{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  .card p:hover,
+  .card img:hover{
+    transform: scale(1.1);
+  }
+  

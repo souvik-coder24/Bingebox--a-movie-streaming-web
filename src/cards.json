@@ -1,0 +1,47 @@
+[
+ {
+    "id": "1",
+    "image": "sang-chi.webp",
+    "name": "Wakanda Forever"
+ },
+ {
+    "id": "2",
+    "image": "avengers.webp",
+    "name": "Avengers"
+ },  
+ {
+    "id": "3",
+    "image": "pirates.webp",
+    "name": "Avengers"
+ },  
+ {
+    "id": "4",
+    "image": "wakanda.webp",
+    "name": "Avengers"
+ },  
+ {
+    "id": "5",
+    "image": "avengers.webp",
+    "name": "Avengers"
+ },  
+ {
+    "id": "6",
+    "image": "avengers.webp",
+    "name": "Avengers"
+ },  
+ {
+    "id": "7",
+    "image": "avengers.webp",
+    "name": "Avengers"
+ },  
+ {
+    "id": "8",
+    "image": "avengers.webp",
+    "name": "Avengers"
+ },  
+ {
+    "id": "9",
+    "image": "avengers.webp",
+    "name": "Avengers"
+ }     
+]

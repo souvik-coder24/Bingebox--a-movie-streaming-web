@@ -16,7 +16,7 @@
     width: 100%;
     padding-left: 6%;
     bottom: 0;
-    margin-bottom: 90px;
+    margin-bottom: 110px;
 }
 .bsp{
     width: 100px;
@@ -57,6 +57,7 @@
     background: rgb(196, 193, 193);
     border-radius: 4px;
     cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .hero-btns .btn2{
     border: 2px solid rgb(196, 193, 193);
@@ -72,6 +73,12 @@
     cursor: pointer;
     color: aliceblue;
     margin-left: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hero-btns .btn:hover,
+.hero-btns .btn2:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
 .btn-icon{
     width: 25px;

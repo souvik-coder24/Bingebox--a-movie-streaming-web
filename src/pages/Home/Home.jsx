@@ -4,14 +4,16 @@ import Navbar from '../../components/Navbar/Navbar'
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FaPlay, FaInfo } from "react-icons/fa"
+import { FaPlay, FaStopwatch } from "react-icons/fa"
 import Data from '../../data.json'
+import TitleCards from '../../components/TitleCards/TitleCards';
+import Footer from '../../components/Footer/Footer';
 
 function Home() {
   var settings = {
     dots: true,
     infinite: true,
-    speed: 300,
+    speed: 800,
     slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 0,
@@ -59,6 +61,7 @@ function Home() {
               muted
               playsInline
               loop
+              poster={item.poster}
             />
             <div className="hero-caption">
               <img src={item.bsp} alt="bingespecial" className='bsp' />
@@ -68,12 +71,20 @@ function Home() {
               <p className='details'>{item.mcategory}</p>
               <div className="hero-btns">
                 <button className='btn'><FaPlay className='btn-icon' />Play</button>
-                <button className='btn2'><FaInfo className='btn-icon' />More info</button>
+                <button className='btn2'><FaStopwatch className='btn-icon' />Watch Later</button>
               </div>
             </div>
           </div>
         ))}
       </Slider>
+      <TitleCards/>
+      <div className="more-cards">
+      <TitleCards title={"Blockbuster Movies"}/>
+      <TitleCards title={"Only on Binge-Box"}/>
+      <TitleCards title={"Upcoming"}/>
+      <TitleCards title={"Top pics for You"}/>
+      </div>
+      <Footer/>
     </div>
   )
 }
