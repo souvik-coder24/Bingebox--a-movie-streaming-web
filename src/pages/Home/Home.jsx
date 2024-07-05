@@ -79,10 +79,10 @@ function Home() {
       </Slider>
       <TitleCards/>
       <div className="more-cards">
-      <TitleCards title={"Blockbuster Movies"}/>
-      <TitleCards title={"Only on Binge-Box"}/>
-      <TitleCards title={"Upcoming"}/>
-      <TitleCards title={"Top pics for You"}/>
+      <TitleCards title={"Blockbuster Movies"} category={"top_rated"}/>
+      <TitleCards title={"Only on Binge-Box"} category={"popular"}/>
+      <TitleCards title={"Upcoming"} category={"upcoming"}/>
+      <TitleCards title={"Top pics for You"} category={"now_playing"}/>
       </div>
       <Footer/>
     </div>

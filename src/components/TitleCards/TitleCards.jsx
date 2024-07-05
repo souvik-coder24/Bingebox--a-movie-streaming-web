@@ -1,11 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './TitleCards.css';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import cards_data from '../../cards.json';
 
-const TitleCards = ({title, category}) => {
+const TitleCards = ({ title, category }) => {
+  const [cardsData, setCardsData] = useState([]);
+
+  useEffect(() => {
+    const options = {
+      method: 'GET',
+      headers: {
+        accept: 'application/json',
+        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZTJiZmQ2NGE1Zjg0NDU2Njc0ZThjYTk5ZDVjYzQ2NSIsIm5iZiI6MTcyMDE5NjM1My41MTk5MjksInN1YiI6IjY2ODgxYmY4NDE5ZDljYzEyYmIwYTM3OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.kugTDtCyfUdXVqK2lpa7cv-_RPZDaJu1TCizLte9U9U'
+      }
+    };
+
+    fetch(`https://api.themoviedb.org/3/movie/${category?category:"now_playing"}?language=en-US&page=1`, options)
+      .then(response => response.json())
+      .then(data => {
+        // Assuming the data structure returned from the API
+        const movies = data.results.map(movie => ({
+          name: movie.title,
+          image: `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+        }));
+        setCardsData(movies);
+      })
+      .catch(err => console.error(err));
+  }, []);
+
   const settings = {
     dots: false,
     infinite: true,
@@ -46,9 +69,9 @@ const TitleCards = ({title, category}) => {
 
   return (
     <div className='title-cards'>
-      <h2>{title?title:"Popular on BingeBox"}</h2>
+      <h2>{title ? title : "Popular on BingeBox"}</h2>
       <Slider {...settings}>
-        {cards_data.map((card, index) => (
+        {cardsData.map((card, index) => (
           <div className="card" key={index}>
             <img src={card.image} alt={card.name} />
             <p>{card.name}</p>

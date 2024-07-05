@@ -1,13 +1,14 @@
 import React from 'react'
 import './Footer.css'
-import { FaYoutube, FaFacebook,FaTwitter, FaInstagramSquare } from "react-icons/fa";
+import { FaYoutube, FaFacebook,FaTwitter} from "react-icons/fa";
+import { IoLogoInstagram } from "react-icons/io";
 
 const Footer = () => {
   return (
     <div className='footer'>
       <div className="footer-icons">
         <FaFacebook className='icons'/>
-        <FaInstagramSquare className='icons'/>
+        <IoLogoInstagram className='icons'/>
         <FaTwitter className='icons'/>
         <FaYoutube className='icons'/>
       </div>
