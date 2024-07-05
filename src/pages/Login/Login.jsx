@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './Login.css'
-import logo from '../../assets/logo.png'
+import logo from '../../assets/login-logo.png'
 
 function Login() {
 
@@ -9,8 +9,8 @@ function Login() {
 
   return (
     <div className='login'>
-      <img src={logo} alt="logo" className='login-logo'/>
       <div className="login-form">
+      <img src={logo} alt="logo" className='login-logo'/>
         <h1>{signState}</h1>
         <form action="">
           {signState === "Sign Up"?<input type="text" placeholder='Your Name'/>:<></>}
