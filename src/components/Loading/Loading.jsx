@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './Loading.css';
-import logo from '../../assets/logo.png'; // Ensure you use the correct path to your logo
+import logo from '../../assets/logo.png';
 
 const Loading = () => {
   return (

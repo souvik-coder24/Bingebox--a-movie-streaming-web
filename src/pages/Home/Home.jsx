@@ -8,7 +8,7 @@ import { FaPlay, FaStopwatch } from "react-icons/fa";
 import Data from '../../data.json';
 import TitleCards from '../../components/TitleCards/TitleCards';
 import Footer from '../../components/Footer/Footer';
-import Loading from '../../components/Loading/Loading'; // Import the Loading component
+import Loading from '../../components/Loading/Loading';
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -16,7 +16,7 @@ function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000); // Simulating loading time
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -60,7 +60,7 @@ function Home() {
   };
 
   if (loading) {
-    return <Loading />; // Show loading animation while content is loading
+    return <Loading />;
   }
 
   return (
