@@ -1,15 +1,26 @@
-import React, { useRef } from 'react';
-import './Home.css'
-import Navbar from '../../components/Navbar/Navbar'
+import React, { useRef, useState, useEffect } from 'react';
+import './Home.css';
+import Navbar from '../../components/Navbar/Navbar';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FaPlay, FaStopwatch } from "react-icons/fa"
-import Data from '../../data.json'
+import { FaPlay, FaStopwatch } from "react-icons/fa";
+import Data from '../../data.json';
 import TitleCards from '../../components/TitleCards/TitleCards';
 import Footer from '../../components/Footer/Footer';
+import Loading from '../../components/Loading/Loading'; // Import the Loading component
 
 function Home() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000); // Simulating loading time
+
+    return () => clearTimeout(timer);
+  }, []);
+
   var settings = {
     dots: true,
     infinite: true,
@@ -48,6 +59,10 @@ function Home() {
     ]
   };
 
+  if (loading) {
+    return <Loading />; // Show loading animation while content is loading
+  }
+
   return (
     <div className='home'>
       <Navbar />
@@ -82,7 +97,7 @@ function Home() {
         <TitleCards title={"Blockbuster Movies"} category={"top_rated"}/>
         <TitleCards title={"Only on Binge-Box"} category={"popular"}/>
         <TitleCards title={"Upcoming"} category={"upcoming"}/>
-        <TitleCards title={"Top pics for You"} category={"now_playing"}/>
+        <TitleCards title={"Top picks for You"} category={"now_playing"}/>
       </div>
       <Footer/>
     </div>
