@@ -22,21 +22,17 @@
     border-radius: 10px;
     text-align: center;
     color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  .card:hover{
+    transform: scale(1.1);
+    color: red;
   }
   
   .card img {
     width: 150px;
     border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     outline: none;
-    cursor: pointer;
-  }
-  .card p{
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-  }
-  .card p:hover,
-  .card img:hover{
-    transform: scale(1.1);
   }
   

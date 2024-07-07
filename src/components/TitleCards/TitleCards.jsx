@@ -38,7 +38,7 @@ const TitleCards = ({ title, category }) => {
     initialSlide: 0,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 6000,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 1024,

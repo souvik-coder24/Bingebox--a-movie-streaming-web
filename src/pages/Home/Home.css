@@ -75,10 +75,16 @@
     margin-left: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.hero-btns .btn:hover,
+.hero-btns .btn:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    color: red;
+}
 .hero-btns .btn2:hover {
     transform: scale(1.1);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    color: red;
+    border: 1px solid red;
 }
 .btn-icon{
     width: 25px;
@@ -94,3 +100,11 @@
 .slick-dots li.slick-active button:before {
     color: red !important;
 }
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+  }
+  
+  .fade-in.active {
+    opacity: 1;
+  }
