@@ -43,7 +43,6 @@
     font-size: 20px;
     cursor: pointer;
 }
-  
 .popup-close {
     position: absolute;
     top: 10px;
@@ -59,6 +58,34 @@
     transform: scale(1.1);
     color: #fff;
 }
+.search-filters{
+    max-width: 472px;
+    margin-top: 20px;
+    margin-left: 15%;
+}
+.filter-element{
+    width: 672px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.filter-element p{
+    border: 1px solid red;
+    color: red;
+    border-radius: 20px;
+    padding: 4px;
+    cursor: pointer;
+    font-size: 13px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.filter-element p:hover{
+    color: #fff;
+    background-color: red;
+    transform: scale(1.2);
+}
+
 .search-results {
     margin-top: 20px;
     overflow: hidden;
@@ -77,10 +104,10 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
- .search-result-item:hover{
+.search-result-item:hover{
     transform: scale(1.1);
     color: red;
- } 
+} 
 .movie-poster {
     width: 150px;
     border-radius: 10px;

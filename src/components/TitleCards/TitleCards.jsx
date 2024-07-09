@@ -3,6 +3,7 @@ import './TitleCards.css';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from 'react-router-dom';
 
 const TitleCards = ({ title, category }) => {
   const [cardsData, setCardsData] = useState([]);
@@ -16,18 +17,18 @@ const TitleCards = ({ title, category }) => {
       }
     };
 
-    fetch(`https://api.themoviedb.org/3/movie/${category?category:"now_playing"}?language=en-US&page=1`, options)
+    fetch(`https://api.themoviedb.org/3/movie/${category ? category : "now_playing"}?language=en-US&page=1`, options)
       .then(response => response.json())
       .then(data => {
-        // Assuming the data structure returned from the API
         const movies = data.results.map(movie => ({
+          id: movie.id, // Ensure you capture the movie ID
           name: movie.title,
           image: `https://image.tmdb.org/t/p/w500${movie.poster_path}`
         }));
         setCardsData(movies);
       })
       .catch(err => console.error(err));
-  }, []);
+  }, [category]);
 
   const settings = {
     dots: false,
@@ -72,10 +73,12 @@ const TitleCards = ({ title, category }) => {
       <h2>{title ? title : "Popular on BingeBox"}</h2>
       <Slider {...settings}>
         {cardsData.map((card, index) => (
-          <div className="card" key={index}>
-            <img src={card.image} alt={card.name} />
-            <p>{card.name}</p>
-          </div>
+          <Link to={`/player/${card.id}`} key={index}>
+            <div className="card">
+              <img src={card.image} alt={card.name} />
+              <p>{card.name}</p>
+            </div>
+          </Link>
         ))}
       </Slider>
     </div>

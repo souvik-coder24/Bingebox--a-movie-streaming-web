@@ -3,6 +3,7 @@ import './Navbar.css';
 import logo from '../../assets/logo.png';
 import { FaSearch, FaRegUserCircle, FaBell } from "react-icons/fa";
 import SearchPopup from '../SearchPopup/SearchPopup';
+import {Link, Outlet } from 'react-router-dom';
 
 
 const Navbar = () => {
@@ -18,7 +19,9 @@ const Navbar = () => {
   return (
     <div className='navbar'>
       <div className="navbar-left">
+        <Link to={"/"}>
         <img src={logo} alt="Logo" />
+        </Link>
         <ul>
           <li>Home</li>
           <li>Tv Shows</li>
@@ -40,6 +43,7 @@ const Navbar = () => {
         </div>
       </div>
       <SearchPopup isOpen={isPopupOpen} onClose={closePopup} />
+      <Outlet />
     </div>
   );
 }
