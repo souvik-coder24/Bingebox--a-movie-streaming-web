@@ -108,3 +108,70 @@
 .fade-in.active {
     opacity: 1;
 }
+
+@media(max-width: 1024px){
+    .hero-caption{
+        position: absolute;
+        width: 100%;
+        padding-left: 6%;
+        bottom: 0;
+        margin-bottom: 20px;
+    }
+    .bsp{
+        width: 50px;
+        height: 20px;
+        margin-bottom: 2px;
+    }
+    .caption-img{
+        width: 125px;
+        height: 45px;
+        margin-bottom: 5px;
+        cursor: pointer;
+    }
+    .hero-caption p{
+        width: 260px;
+        max-width: 700px;
+        font-size: 7px;
+        margin-bottom: 2px;
+        color: rgb(204, 207, 209);
+    }
+    .hero-caption .details{
+        font-size: 8px;
+        font-weight: 600;
+    }
+    .hero-btns{
+        display: flex;
+        gap: 5px;
+        margin-bottom: 2px;
+    }
+    .hero-btns .btn{
+        border: 0;
+        outline: 0;
+        padding: 2px 4px;
+        display: inline-flex;
+        align-items: center;
+        gap: 2px;
+        font-size: 9px;
+        font-weight: 600;
+        background: rgb(196, 193, 193);
+        border-radius: 4px;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hero-btns .btn2{
+        border: 2px solid rgb(196, 193, 193);
+        outline: 0;
+        padding: 2px 4px;
+        display: inline-flex;
+        align-items: center;
+        gap: 2px;
+        font-size: 9px;
+        font-weight: 300;
+        background: transparent;
+        border-radius: 4px;
+        cursor: pointer;
+        color: aliceblue;
+        margin-left: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+}

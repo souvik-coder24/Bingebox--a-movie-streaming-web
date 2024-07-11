@@ -73,7 +73,7 @@ const TitleCards = ({ title, category }) => {
       <h2>{title ? title : "Popular on BingeBox"}</h2>
       <Slider {...settings}>
         {cardsData.map((card, index) => (
-          <Link to={`/player/${card.id}`} key={index}>
+          <Link to={`/player/${card.id}`} key={index} className='card-link'>
             <div className="card">
               <img src={card.image} alt={card.name} />
               <p>{card.name}</p>

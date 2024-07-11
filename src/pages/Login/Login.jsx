@@ -2,9 +2,27 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import './Login.css';
 import logo from '../../assets/login-logo.png';
+import { login, signup } from '../../firebase';
 
 function Login() {
   const [signState, setSignState] = useState("LogIn");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const user_auth = async (event) => {
+    event.preventDefault();
+    try {
+      if (signState === "LogIn") {
+        await login(email, password);
+      } else {
+        await signup(name, email, password);
+      }
+    } catch (error) {
+      console.log(error);
+      alert(error.message);
+    }
+  }
 
   return (
     <div className='login'>
@@ -25,12 +43,11 @@ function Login() {
           }}
         />
         <h1>{signState}</h1>
-        <form action="">
-          {signState === "Sign Up" ? <input type="text" placeholder='Your Name'/> : null}
-          <input type="email" placeholder='Enter your email'/>
-          <input type="password" placeholder='Enter your Password'/>
-          <button>{signState}</button>
-          {/* Conditional rendering of Forgot Password link */}
+        <form onSubmit={user_auth}>
+          {signState === "Sign Up" ? <input value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder='Your Name'/> : null}
+          <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder='Enter your email'/>
+          <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder='Enter your Password'/>
+          <button type='submit'>{signState}</button>
           {signState === "LogIn" && (
             <div className="forgot">
               <a href="#">Forgot Password?</a>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './SearchPopup.css';
 import { FaSearch, FaTimes } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const SearchPopup = ({ isOpen, onClose }) => {
   const [query, setQuery] = useState('');
@@ -26,6 +27,8 @@ const SearchPopup = ({ isOpen, onClose }) => {
     Lifestyle: '10751,99',
     Food: '99,12',
   });
+
+  const navigate = useNavigate();
 
   const handleSearch = async (filter) => {
     let url = `${baseURL}/search/movie?api_key=${apiKey}&query=${query}`;
@@ -56,6 +59,11 @@ const SearchPopup = ({ isOpen, onClose }) => {
     handleSearch(genreId);
   };
 
+  const handleResultClick = (id) => {
+    onClose();
+    navigate(`/player/${id}`);
+  };
+
   return (
     isOpen && (
       <div className='search-popup-overlay' onClick={onClose}>
@@ -76,7 +84,7 @@ const SearchPopup = ({ isOpen, onClose }) => {
           </div>
           <div className='search-results'>
             {results.map(result => (
-              <div key={result.id} className='search-result-item'>
+              <div key={result.id} className='search-result-item' onClick={() => handleResultClick(result.id)}>
                 {result.poster_path && (
                   <img src={`${imageBaseURL}${result.poster_path}`} alt={result.title} className='movie-poster'/>
                 )}

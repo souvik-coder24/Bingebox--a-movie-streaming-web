@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
 import logo from '../../assets/logo.png';
 import { FaSearch, FaRegUserCircle, FaBell } from "react-icons/fa";
 import SearchPopup from '../SearchPopup/SearchPopup';
-import {Link, Outlet } from 'react-router-dom';
-
+import { Link, Outlet } from 'react-router-dom';
+import { auth, logout } from '../../firebase';
 
 const Navbar = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -16,29 +16,31 @@ const Navbar = () => {
   const closePopup = () => {
     setIsPopupOpen(false);
   };
+
+
   return (
     <div className='navbar'>
       <div className="navbar-left">
-        <Link to={"/"}>
-        <img src={logo} alt="Logo" />
+        <Link to="/">
+          <img src={logo} alt="Logo" />
         </Link>
         <ul>
           <li>Home</li>
-          <li>Tv Shows</li>
+          <li>About Us</li>
           <li>Movies</li>
           <li>New & Popular</li>
           <li>Wish List</li>
-          <li>Browse by Language</li>
+          <li>Only on BingeBox</li>
         </ul>
       </div>
       <div className="navbar-right">
         <FaSearch className='icons' onClick={openPopup} />
-        <p>Children</p>
-        <FaBell className='icons'/>
+        <p>Subscription</p>
+        <FaBell className='icons' />
         <div className="navbar-profile">
           <FaRegUserCircle className='profile' />
           <div className="dropdown">
-            <p>Sign Out</p>
+            <p onClick={()=>{logout()}}>Sign Out</p>
           </div>
         </div>
       </div>
@@ -46,6 +48,6 @@ const Navbar = () => {
       <Outlet />
     </div>
   );
-}
+};
 
 export default Navbar;

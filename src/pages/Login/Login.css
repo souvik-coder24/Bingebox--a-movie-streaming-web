@@ -92,3 +92,23 @@
     font-size: 13px;
     color: #fff;
 }
+
+@media (max-width: 500px) {
+    .login{
+        padding: 30% 10%;
+    }
+    .login-form{
+        padding: 20px;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 1026px){
+    .login{
+        padding: 30% 5%;
+    }
+    .login-form{
+        padding: 70px;
+        margin-top: 40px;
+    }
+}
