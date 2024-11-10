@@ -30,6 +30,8 @@ function Home() {
     initialSlide: 0,
     arrows: false,
     autoplay: true,
+    fade: true,
+    cssEase: 'linear',
     autoplaySpeed: 30000,
     responsive: [
       {

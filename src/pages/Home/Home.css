@@ -16,7 +16,7 @@
     width: 100%;
     padding-left: 6%;
     bottom: 0;
-    margin-bottom: 110px;
+    margin-bottom: 200px;
 }
 .bsp{
     width: 100px;
@@ -89,7 +89,7 @@
 .btn-icon{
     width: 25px;
 }
-.slick-dots{
+.slick-dots{ 
     margin-top: -20px;
 }
 .slick-dots li button:before {

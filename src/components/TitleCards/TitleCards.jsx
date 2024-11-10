@@ -21,11 +21,12 @@ const TitleCards = ({ title, category }) => {
       .then(response => response.json())
       .then(data => {
         const movies = data.results.map(movie => ({
-          id: movie.id, // Ensure you capture the movie ID
+          id: movie.id,
           name: movie.title,
           image: `https://image.tmdb.org/t/p/w500${movie.poster_path}`
         }));
         setCardsData(movies);
+        console.log(movies)
       })
       .catch(err => console.error(err));
   }, [category]);

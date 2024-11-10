@@ -1,26 +1,107 @@
-.player{
-    height: 100vh;
+.player {
+    height: 80vh;
+    margin-top: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.Player p{
-    position: absolute;
-    align-items: center;
-    top: 20px;
-    left: 20px;
-    width: 50px;
-    cursor: pointer;
-}
-.player iframe{
+
+.player iframe {
     width: 90%;
     height: 600px;
     border-radius: 40px;
 }
-.player-info{
+
+.player-info {
     width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 20px;
+}
+
+.Header {
+    font-size: 24px;
+    font-weight: 700;
+}
+.date {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.description {
+    width: 90%;
+    margin: 10px 0;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.button-container {
+    display: flex;
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 4rem;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.watch-together-btn {
+    border: 2px solid rgb(255, 64, 129);
+    outline: 0;
+    padding: 8px 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 300;
+    background: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    color: rgb(255, 64, 129);
+    margin-left: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.watch-later-btn {
+    border: 2px solid rgb(76, 175, 80);
+    outline: 0;
+    padding: 8px 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 300;
+    background: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    color: rgb(76, 175, 80);
+    margin-left: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.watch-together-btn:hover {
+    border: 2px solid rgb(109, 3, 38);
+    color: rgb(109, 3, 38);
+    transform: scale(1.03);
+}
+
+.watch-later-btn:hover {
+    border: 2px solid rgb(6, 84, 8);
+    color: rgb(6, 84, 8);
+    transform: scale(1.03);
+}
+
+.watch-together-btn .btn-icon,
+.watch-later-btn .btn-icon {
+    transition: color 0.3s ease;
+}
+
+.watch-together-btn:hover .btn-icon {
+    color: rgb(255, 64, 129);
+}
+
+.watch-later-btn:hover .btn-icon {
+    color: rgb(76, 175, 80);
 }
