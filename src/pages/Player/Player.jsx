@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Player.css';
 import { FaHeart, FaClock } from "react-icons/fa6";
 import { useParams } from 'react-router-dom';
+import Navbar from '../../components/Navbar/Navbar';
 
 const Player = () => {
   const { id } = useParams();
@@ -61,27 +62,28 @@ const Player = () => {
 
   return (
     <>
-    <div className='player'>
-      {videoData.key ? (
-        <iframe 
-          src={`https://www.youtube.com/embed/${videoData.key}`} 
-          title='Trailer' 
-          frameBorder='0' 
-          allowFullScreen
-        ></iframe>
-      ) : (
-        <p>Loading...</p>
-      )}
-      <div className="player-info">
-        <p className='Header'>{videoData.name}</p>
-        {videoData.published_at ? (
-          <p className='date'>Release Date: {videoData.published_at.slice(0, 10)}</p>
+      <Navbar />
+      <div className='player'>
+        {videoData.key ? (
+          <iframe 
+            src={`https://www.youtube.com/embed/${videoData.key}`} 
+            title='Trailer' 
+            frameBorder='0' 
+            allowFullScreen
+          ></iframe>
         ) : (
-          <p className='date'>Release Date: Not available</p>
+          <p>Loading...</p>
         )}
+        <div className="player-info">
+          <p className='Header'>{videoData.name}</p>
+          {videoData.published_at ? (
+            <p className='date'>Release Date: {videoData.published_at.slice(0, 10)}</p>
+          ) : (
+            <p className='date'>Release Date: Not available</p>
+          )}
+        </div>
+        <p className="description">{videoData.description || "Not available"}</p>
       </div>
-      <p className="description">{videoData.description || "Not available"}</p>
-    </div>
       <div className='button-container'>
         <button className='watch-together-btn' onClick={handleWatchTogether}>
           Watch Together <FaHeart className='btn-icon' />
@@ -90,7 +92,7 @@ const Player = () => {
           Watch Later <FaClock className='btn-icon' />
         </button>
       </div>
-      </>
+    </>
   );
 };
 

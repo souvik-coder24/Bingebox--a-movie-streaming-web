@@ -88,8 +88,10 @@ const SearchPopup = ({ isOpen, onClose }) => {
                 {result.poster_path && (
                   <img src={`${imageBaseURL}${result.poster_path}`} alt={result.title} className='movie-poster'/>
                 )}
-                <h3>{result.title}</h3>
-                <p><strong>Release Date:</strong> {result.release_date}</p>
+                <div className="text">
+                  <h3>{result.title}</h3>
+                  <p><strong>Release Date:</strong> {result.release_date}</p>
+                </div>
               </div>
             ))}
           </div>

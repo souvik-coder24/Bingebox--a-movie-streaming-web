@@ -1,0 +1,119 @@
+.container {
+    display: flex;
+    min-height: 100vh;
+    margin-top: 8rem;
+    padding: 30px 40px;
+    background-color: #000;
+  }
+  
+  .content {
+    min-width: 100%;
+  }
+  
+  .title {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: 600;
+  }
+  
+  .description {
+    color: #aaaaaa;
+    font-size: 15px;
+    line-height: 27px;
+    font-weight: 500;
+  }
+  
+  .toggleButtons {
+    margin-top: 30px;
+    display: inline-flex;
+    border: 1px solid #333;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .toggleButton {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 700;
+    padding: 15px 25px;
+    transition: all 0.3s ease;
+  }
+  
+  .toggleButton:hover {
+    background-color: #d20b0b;
+    color: #ffffff;
+  }
+  
+  .grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px #333;
+    overflow: hidden;
+  }
+  
+  .cardHeader {
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .badge {
+    background-color: #d20b0b;
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 12px;
+    line-height: 28px;
+    font-weight: 700;
+  }
+  
+  .planTitle {
+    color: #ffffff;
+    font-size: 19px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+  
+  .planPrice {
+    color: #ffffff;
+    font-size: 50px;
+    line-height: 63px;
+    font-weight: 700;
+  }
+  
+  .planFeatures {
+    padding: 25px;
+    color: #aaaaaa;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+  
+  .actionButton {
+    background-color: #d20b0b;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 600;
+    padding: 15px 25px;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .actionButton:hover {
+    background-color: #990000;
+  }
+  

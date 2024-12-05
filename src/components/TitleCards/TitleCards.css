@@ -6,21 +6,21 @@
   
   .title-cards h2 {
     color: white;
+    font-size: 30px;
+    font-weight: 600;
     margin-bottom: 10px;
   }
   
   .slick-slide {
-    padding: 0 2px; /* Add padding to each slide to create a gap */
+    padding: 0 2px;
   }
   
   .slick-list {
-    margin: 0 -2px; /* Adjust margin to balance the padding */
+    margin: 0 -2px;
   }
-  
   .card {
     padding: 10px;
     border-radius: 10px;
-    text-align: center;
     color: white;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
