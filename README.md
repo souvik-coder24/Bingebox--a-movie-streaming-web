@@ -49,7 +49,97 @@ BingeBox integrates several advanced features to elevate the movie-watching expe
 ## Installation
 To set up BingeBox locally, follow these steps:
 
-1. **Clone the repository:**
+Getting Started
+---------------
 
-   ```bash
-   git clone https://github.com/your-username/BingeBox.git
+1.  **Clone the repository:**
+
+    bash
+
+    Copy code
+
+    `git clone https://github.com/your-username/BingeBox.git`
+
+2.  **Navigate to the project directory:**
+
+    bash
+
+    Copy code
+
+    `cd BingeBox`
+
+3.  **Install dependencies:**
+
+    bash
+
+    Copy code
+
+    `npm install`
+
+4.  **Start the development server:**
+
+    bash
+
+    Copy code
+
+    `npm run dev`
+
+5.  **Build the project for production (optional):**
+
+    bash
+
+    Copy code
+
+    `npm run build`
+
+6.  **Preview the production build (optional):**
+
+    bash
+
+    Copy code
+
+    `npm run preview`
+
+* * * * *
+
+Contributing
+------------
+
+We welcome contributions to **BingeBox**. To contribute:
+
+1.  **Fork the repository on GitHub.**
+
+2.  **Create a new branch:**
+
+    bash
+
+    Copy code
+
+    `git checkout -b feature/your-feature-name`
+
+3.  **Stage all changes for the next commit:**
+
+    bash
+
+    Copy code
+
+    `git add .`
+
+4.  **Commit the staged changes with a descriptive message:**
+
+    bash
+
+    Copy code
+
+    `git commit -m "Add your feature or fix description"`
+
+5.  **Push the committed changes to a specific branch in your remote repository:**
+
+    bash
+
+    Copy code
+
+    `git push origin feature/your-feature-name`
+
+6.  **Open a pull request:**\
+    Go to the original repository on GitHub, compare changes, and open a pull request with a detailed description of your contributions.
